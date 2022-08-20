@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText fname,lname,dob,ph,em,pwd;
     private Button b;
+    String fsname,lsname,db,mob,ml,psw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,34 +30,49 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                fsname=fname.getText().toString().trim();
+                lsname=lname.getText().toString().trim();
+                db=dob.getText().toString().trim();
+                mob=ph.getText().toString().trim();
+                ml=em.getText().toString().trim();
+                psw=pwd.getText().toString().trim();
+
+                if(fsname.equals(""))
+                {
+                    Toast.makeText(MainActivity.this, "Enter your first name", Toast.LENGTH_SHORT).show();
+                }
+                else if(lsname.equals(""))
+                {
+                    Toast.makeText(MainActivity.this, "Enter your last name", Toast.LENGTH_SHORT).show();
+                }
+                else if(db.equals(""))
+                {
+                    Toast.makeText(MainActivity.this, "Enter your date of birth", Toast.LENGTH_SHORT).show();
+                }
+                else if(mob.equals(""))
+                {
+                    Toast.makeText(MainActivity.this, "Enter your mobile number", Toast.LENGTH_SHORT).show();
+                }
+                else if(ml.equals(""))
+                {
+                    Toast.makeText(MainActivity.this, "Enter your email", Toast.LENGTH_SHORT).show();
+                }
+                else if(psw.equals(""))
+                {
+                    Toast.makeText(MainActivity.this, "Enter your password", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                }
+
+
+
             }
         });
 
-//        if(fname.getText().toString()==null)
-//        {
-//            Toast.makeText(this, "Enter First Name", Toast.LENGTH_SHORT).show();
-//        }
-//        else if (lname.getText().toString()==null)
-//        {
-//            Toast.makeText(this, "Enter Last Name", Toast.LENGTH_SHORT).show();
-//        }
-//        else if (dob.getText().toString()==null)
-//        {
-//            Toast.makeText(this, "Enter Date of Birth", Toast.LENGTH_SHORT).show();
-//        }
-//        else if (ph.getText().toString()==null)
-//        {
-//            Toast.makeText(this, "Enter Phone Number", Toast.LENGTH_SHORT).show();
-//        }
-//        else if (em.getText().toString()==null)
-//        {
-//            Toast.makeText(this, "Enter Email", Toast.LENGTH_SHORT).show();
-//        }
-//        else if (pwd.getText().toString()==null)
-//        {
-//            Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
-//        }
+
+
 
 
 
