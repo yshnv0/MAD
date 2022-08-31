@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 number+="0";
                 break;
             case R.id.clr:
-                number+="";
+                number="";
                 break;
 
         }
