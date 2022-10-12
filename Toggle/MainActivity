@@ -1,0 +1,33 @@
+package com.example.mytoggle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+ImageView im1,im2;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        im1=findViewById(R.id.img1);
+        im2=findViewById(R.id.img2);
+        im1.setOnClickListener(this:: onClick);
+        im2.setOnClickListener(this:: onClick);
+
+    }
+    private void onClick(View view){
+        if(view.getId()==R.id.img2){
+            im2.setVisibility(view.GONE);
+            im1.setVisibility(view.VISIBLE);
+        }
+        else
+        {
+
+            im1.setVisibility(view.GONE);
+            im2.setVisibility(view.VISIBLE);
+        }
+    }
+}
