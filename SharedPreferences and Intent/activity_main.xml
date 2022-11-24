@@ -50,7 +50,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pwd"
         app:layout_constraintVertical_bias="0.363"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="10dp"
+        android:onClick="Save"/>
 
     <Button
         android:id="@+id/b2"
@@ -64,5 +65,6 @@
         app:layout_constraintTop_toBottomOf="@+id/pwd"
         app:layout_constraintVertical_bias="0.363"
         app:layout_constraintHorizontal_weight="1"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:onClick="Next"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
