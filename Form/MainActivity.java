@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner d;
     private CheckBox c1,c2,c3,c4;
     private Button b;
-    String nm,em,ph,ag,dg
-            ;
+    String nm,em,ph,ag,dg;
     int gn;
 
     @Override
